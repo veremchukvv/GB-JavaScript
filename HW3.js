@@ -1,13 +1,12 @@
-    var i = 2;
-    while (i <= 100) {
-        for (z=1;z<=i-1;z++) {
+//Первое задание
+
+outer: for (i=2;i<=100;i++) {
+        for (z=2;z<=i-1;z++) {
         simple = i % z;
-        alert("i = "+i+"z = "+z+"simple = "+simple);
-        if (simple !== 0) {
-            alert(i);
-            break
+        if (simple === 0) {
+            alert(i+" Составное");
+            continue outer
         }
-        else continue
     }
-    i++;
+    alert(i+" Простое");
     }
