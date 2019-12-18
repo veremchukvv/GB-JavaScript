@@ -16,15 +16,12 @@
         tr = table.insertRow();
         tr.className = "blacklines";
      }
-for (j = 1; j <= 8; j++) {
+for (j = 1; j <= 10; j++) {
         tr.insertCell();
 }
 }
 
 document.body.append(table);
-
-//var myTable = document.getElementsByTagName("table")[0];
-//myTable.style.borderStyle = "solid";
 
 var whiteElem = document.querySelectorAll('.whitelines td');
 
@@ -35,7 +32,6 @@ for (var i = 0; i < whiteElem.length; i++){
         else {
             whiteElem[i].style.backgroundColor = "black";
         }
-        whiteElem[i].style.paddingTop = 15;
         whiteElem[i].style.width = 15;
 }
 
@@ -48,33 +44,38 @@ for (var i = 0; i < blackElem.length; i++){
         else {
             blackElem[i].style.backgroundColor = "white";
         }
-        blackElem[i].style.paddingTop = 15;
         blackElem[i].style.width = 15;
 }
 
-/*var leftSign = document.querySelectorAll('td');
-leftSign.forEach;
+for (i = 1; i <= 8; i++) {
+var cell=document.getElementsByTagName("tr")[i].getElementsByTagName("td")[0];
+console.log(cell);
+cell.style.backgroundColor = null;
+cell.innerText = i;
+}
 
-console.log(leftSign);
-*/
+for (i = 1; i <= 8; i++) {
+    var cell=document.getElementsByTagName("tr")[i].getElementsByTagName("td")[9];
+    console.log(cell);
+    cell.style.backgroundColor = null;
+    cell.style.transform = "rotate(180deg)";
+    cell.innerText = i;
+    }
+
 var botSign = document.querySelectorAll('.botsign td');
-console.log(botSign);
 
 j = "A";
-for (var i = 0; i < botSign.length; i++) {  
+for (var i = 1; i < (botSign.length-1); i++) {  
     botSign[i].innerText = j;
     j = String.fromCharCode(j.charCodeAt(0) + 1);
     
 }
 
 var topSign = document.querySelectorAll('.topsign td');
-console.log(topSign);
 
 j = "A";
-for (var i = 0; i < topSign.length; i++) {  
+for (var i = 1; i < (topSign.length-1); i++) {  
     topSign[i].style.transform = "rotate(180deg)";
     topSign[i].innerText = j;
     j = String.fromCharCode(j.charCodeAt(0) + 1);
 }
-
-
