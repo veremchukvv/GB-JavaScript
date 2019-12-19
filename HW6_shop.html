@@ -8,16 +8,20 @@
 </head>
 <body>
 	<div id="catalog">
-        <img id="lot_1" src="img/shop/1.jpg">
-        <p><h3 id="price_1">цена 1000</h3><input type="button" value="Купить"></p>
-        <img id="lot_2" src="img/shop/2.jpg">
-        <p><h3 id="price_2">цена 2000</h3><input type="button" value="Купить"></p>
-        <img id="lot_3" src="img/shop/3.jpg">
-        <p><h3 id="price_3">цена 3000</h3><input type="button" value="Купить"></p>
+        <p id="lot_1_name">жигули</p>
+        <img src="img/shop/1.jpg">
+        <p id="lot_1_price">цена 1000</p><input type="button" value="Купить" id="lot_1_buy">
+        <p id="lot_2_name">кабрио</p>
+        <img src="img/shop/2.jpg">
+        <p id="lot_2_price">цена 2000</p><input type="button" value="Купить" id="lot_2_buy">
+        <p id="lot_3_name">F1</p>
+        <img src="img/shop/3.jpg">
+        <p id="lot_3_price">цена 3000</p><input type="button" value="Купить" id="lot_3_buy">
     </div>
     <div id="basket">
-        <p><h3>корзина</h3></p>
-        <p><h3 id = 'sum'>итоговая сумма = </h3></p>
+        <p>Корзина</p>
+        <p id="lots">Выбранные товары: </p>
+        <p>Итоговая сумма = </p><p id="sum">0</p>
     </div>
 </body>
 </html>
