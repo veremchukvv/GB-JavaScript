@@ -9,7 +9,6 @@ a3.onclick = buyIt;
 function buyIt(eventObj){
     curSum = document.getElementById('sum');
     sumVal = parseInt(curSum.innerText);
-    console.log(sumVal);
     eventElement = eventObj.target;
     idPart = eventElement.id.split("_");
     lot = idPart[1];
@@ -19,5 +18,9 @@ function buyIt(eventObj){
     lotPricePartInt = parseInt(lotPricePart[1]);
     sum = sumVal+lotPricePartInt;
     curSum.innerHTML = sum;
-    console.log(sum);
+    curLots = document.getElementById('lots');
+    textLots = curLots.innerText;
+    lotName = document.getElementById("lot_"+lot+"_name")
+    lotNameText = lotName.innerText;
+    curLots.innerHTML += "<p>"+lotNameText+"</p>";
 }
