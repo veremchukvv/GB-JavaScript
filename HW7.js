@@ -213,17 +213,14 @@ function createFood() {
  * Создание препятствий
  */
 function createBomb() {
-    //var bombCreated = false;
 
-    //while (!bombCreated) { //пока не создали препятствие
-        // рандом
         var bomb_x = Math.floor(Math.random() * FIELD_SIZE_X);
         var bomb_y = Math.floor(Math.random() * FIELD_SIZE_Y);
 
         var bomb_cell = document.getElementsByClassName('cell-' + bomb_y + '-' + bomb_x)[0];
         var bomb_cell_classes = bomb_cell.getAttribute('class').split(' ');
 
-        // проверка на змейку
+        // проверка на змейку и еду
         if (!bomb_cell_classes.includes('snake-unit') || !bomb_cell_classes.includes('food-unit') ) {
             var classes = '';
             for (var i = 0; i < bomb_cell_classes.length; i++) {
@@ -231,7 +228,6 @@ function createBomb() {
             }
 
             bomb_cell.setAttribute('class', classes + 'bomb-unit');
-            //bombCreated = true;
         }
 }
 
