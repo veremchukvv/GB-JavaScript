@@ -25,9 +25,8 @@
     margin-left: 10px;
 }
 
-#score{
-    width: 332px;
-    padding: 15px;
+#score-table{
+    width: 361px;
     color: white;
     background-color: blue;
     text-align: center;

@@ -174,6 +174,9 @@ function haveFood(unit) {
         createFood();
 
         score++;
+        //выводим счёт
+        scoreCount = document.getElementById("score");
+        scoreCount.innerText = score;
     }
     return check;
 }
@@ -210,7 +213,7 @@ function createFood() {
  * @param e - событие
  */
 function changeDirection(e) {
-    console.log(e.keyCode);
+    //console.log(e.keyCode);
 	switch (e.keyCode) {
         case 37: // Клавиша влево
             if (direction != 'x+') {
